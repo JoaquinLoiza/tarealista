@@ -20,7 +20,7 @@ header {
     box-shadow: 0px 12px 15px -3px #0000001a;
 }
 
-#container {
+#containerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,13 @@ header {
     color: #d83b23;
 }
 
+
 main {
     background-color: #ee9f92;
     margin-top: 10rem;
+}
+
+.container {
+    max-width: 1920px;
+    
 }
