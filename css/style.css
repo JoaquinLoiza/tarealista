@@ -17,7 +17,6 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    box-shadow: 0px 12px 15px -3px #0000001a;
 }
 
 #containerHeader {
@@ -53,13 +52,16 @@ header {
     color: #d83b23;
 }
 
-
 main {
-    background-color: #ee9f92;
     margin-top: 22vh;
+    background-color: #fdfdfd;
 }
 
-.container {
+.containerMain {
+    padding-top: 7vh;
     max-width: 1920px;
     font-family: 'Nunito';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
