@@ -45,8 +45,11 @@ function showProjects( projects ) {
                 <td>${project.title}</td>
                 <td>${project.creator}</td>
                 <td>
-                    <button class="btn btn-danger btn-eliminar">
+                    <button class="btn btn-danger">
                         <i class="bi bi-trash3"></i>
+                    </button>
+                    <button class="btn btn-warning">
+                        <i class="bi bi-pencil-square"></i>
                     </button>
                 </td>
             </tr>
