@@ -1,3 +1,56 @@
 #containerToDo {
     width: 60vw;
 }
+
+.table:hover {
+    /* Cambia el valor a "transparent"*/
+    --bs-table-bg: transparent !important; 
+}
+
+#projectContainer tr:hover {
+    background-color: #93c7d580;
+}
+
+#projectContainer a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#backgroundBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+#modalEditProject {
+    width: 35vw;
+    margin: auto;
+    margin-top: 25vh;
+    border: 2px solid rgb(69, 69, 69);
+    border-radius: 20px;
+    background-color: #fdfdfd;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+#headerModal {
+    margin: 1.2rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contInputModal {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 2rem 3rem 2rem;
+    row-gap: 20px;
+}
