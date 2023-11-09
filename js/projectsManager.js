@@ -170,8 +170,7 @@ function tableEvents() {
 
 function modalEditProject(idProject) {
     
-    showHidden();
-    
+    let btnConfirmEdition = document.getElementById("btnEditProject");
     let inputTitle = document.getElementById("editNameProject");
     let inputAuthor = document.getElementById("editAuthorProject");
     let project;
@@ -180,17 +179,17 @@ function modalEditProject(idProject) {
         project = await getProject(idProject);
         inputTitle.value = project.title;
         inputAuthor.value = project.creator;
+        showHidden();
+        btnConfirmEdition.addEventListener("click", handlerEdit);
     })();
     
-    let btnConfirmEdition = document.getElementById("btnEditProject");
-    btnConfirmEdition.addEventListener("click", () => {
+    function handlerEdit() {
         editProject(idProject);
-    })
+        btnConfirmEdition.removeEventListener("click", handlerEdit)
+    }
 }
 
 function editProject(idProject) {
-
-    console.log("Editando id: "+idProject);
 
     let inputTitle = document.getElementById("editNameProject");
     let inputAuthor = document.getElementById("editAuthorProject");
@@ -201,9 +200,6 @@ function editProject(idProject) {
         creator: inputAuthor.value,
         finished: false
     }
-    showHidden();
-    inputTitle.value = "";
-    inputAuthor.value = "";
 
     fetch(url + endpoint, {
         method: "PUT",
@@ -217,6 +213,9 @@ function editProject(idProject) {
         }
     }).then(async () => {
         showProjects(await getProjects());
+        showHidden();
+        inputTitle.value = "";
+        inputAuthor.value = "";
     }).catch((error) => {
         console.log(error);
     });
