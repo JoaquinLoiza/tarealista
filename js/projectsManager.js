@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 const btnCloseModal = document.getElementById("closeModalIcon");
 btnCloseModal.addEventListener('click', showHidden);
 
-const url = "https://6542deec01b5e279de1faa70.mockapi.io/api";
+const url = "https://66678ce7f53957909ff49ab1.mockapi.io/api";
 
 
 //--------------- FUNCIONES -------------------
